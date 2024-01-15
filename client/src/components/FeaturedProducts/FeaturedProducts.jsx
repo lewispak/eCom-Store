@@ -13,8 +13,8 @@ const FeaturedProducts = ({type}) => {
       img2: "https://images.pexels.com/photos/1163194/pexels-photo-1163194.jpeg?auto=compress&cs=tinysrgb&w=1600",
       title: "Shoes",
       isNew: true,
-      oldPrice: 55,
-      price: 27
+      oldPrice: 300,
+      price: 240
     },
     {
       id: 2,
@@ -29,16 +29,16 @@ const FeaturedProducts = ({type}) => {
       img: "https://images.pexels.com/photos/1457983/pexels-photo-1457983.jpeg?auto=compress&cs=tinysrgb&w=1600",
       title: "Jacket",
       isNew: false,
-      oldPrice: 80,
-      price: 45
+      oldPrice: 300,
+      price: 200
     },
     {
       id: 4,
       img: "https://images.pexels.com/photos/2065200/pexels-photo-2065200.jpeg?auto=compress&cs=tinysrgb&w=1600",
       title: "Skirt",
       isNew: false,
-      oldPrice: 60,
-      price: 40
+      oldPrice: 120,
+      price: 85
     }
   ]
   return (
