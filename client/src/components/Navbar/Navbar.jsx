@@ -42,7 +42,7 @@ const Navbar = () => {
 
         {/* --- Navbar Center Logo --- */}
         <div className="center">
-          <Link className="link" to="/">PAKSTORE</Link>
+          <Link className="link" to="/">HOKO</Link>
         </div>
 
         <div className="right">
