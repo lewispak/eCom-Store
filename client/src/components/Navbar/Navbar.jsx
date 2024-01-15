@@ -8,6 +8,8 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 import {Link} from "react-router-dom";
 
+import "./navbar.scss";
+
 const Navbar = () => {
   return (
     <div className="navbar">
@@ -17,7 +19,7 @@ const Navbar = () => {
 
           {/* --- Navbar Web Settings --- */}
           <div className="item">
-            <img src="en.png" alt="" />
+            <img src="/en.png" alt="" />
             <KeyboardArrowDownIcon/>
           </div>
           <div className="item">
@@ -27,45 +29,47 @@ const Navbar = () => {
 
           {/* --- Navbar Shopping Categories --- */}
           <div className="item">
-            <Link to="/products/1">Women</Link>
+            <Link className="link" to="/products/1">Women</Link>
           </div>
           <div className="item">
-            <Link to="/products/2">Men</Link>
+            <Link className="link" to="/products/2">Men</Link>
           </div>
           <div className="item">
-            <Link to="/products/3">Children</Link>
+            <Link className="link" to="/products/3">Children</Link>
           </div>
 
         </div>
 
         {/* --- Navbar Center Logo --- */}
         <div className="center">
-          <Link to="/">PAKSTORE</Link>
+          <Link className="link" to="/">PAKSTORE</Link>
         </div>
 
         <div className="right">
 
           {/* --- Navbar Menu Items --- */}
-          <div className="center">
-            <Link to="/">Home</Link>
+          <div className="item">
+            <Link className="link" to="/">Home</Link>
           </div>
-          <div className="center">
-            <Link to="/">About</Link>
+          <div className="item">
+            <Link className="link" to="/">About</Link>
           </div>
-          <div className="center">
-            <Link to="/">Contact</Link>
+          <div className="item">
+            <Link className="link" to="/">Contact</Link>
           </div>
-          <div className="center">
-            <Link to="/">Stores</Link>
+          <div className="item">
+            <Link className="link" to="/">Stores</Link>
           </div>
 
           {/* --- Icons --- */}
-          <SearchIcon/>
-          <PersonOutlineOutlinedIcon/>
-          <FavoriteBorderOutlinedIcon/>
-          <div className="cartIicon">
-            <ShoppingCartOutlinedIcon/>
-            <span>0</span>
+          <div className="icons">
+            <SearchIcon/>
+            <PersonOutlineOutlinedIcon/>
+            <FavoriteBorderOutlinedIcon/>
+            <div className="cartIcon">
+              <ShoppingCartOutlinedIcon/>
+              <span>0</span>
+            </div>
           </div>
 
         </div>

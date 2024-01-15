@@ -10,6 +10,8 @@ import Products from "./pages/Products/Products";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 
+import "./app.scss";
+
 const Layout = () =>{
   return (
     <div className="app">
