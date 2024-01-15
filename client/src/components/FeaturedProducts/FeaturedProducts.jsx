@@ -11,7 +11,7 @@ const FeaturedProducts = ({type}) => {
       id: 1,
       img: "https://images.pexels.com/photos/1972115/pexels-photo-1972115.jpeg?auto=compress&cs=tinysrgb&w=1600",
       img2: "https://images.pexels.com/photos/1163194/pexels-photo-1163194.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      title: "Long Sleeve Graphic T-Shirt",
+      title: "Shoes",
       isNew: true,
       oldPrice: 55,
       price: 27
@@ -19,7 +19,7 @@ const FeaturedProducts = ({type}) => {
     {
       id: 2,
       img: "https://images.pexels.com/photos/1759622/pexels-photo-1759622.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      title: "Coat",
+      title: "Glasses",
       isNew: true,
       oldPrice: 200,
       price: 120
@@ -27,7 +27,7 @@ const FeaturedProducts = ({type}) => {
     {
       id: 3,
       img: "https://images.pexels.com/photos/1457983/pexels-photo-1457983.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      title: "Skirt",
+      title: "Jacket",
       isNew: false,
       oldPrice: 80,
       price: 45
@@ -35,7 +35,7 @@ const FeaturedProducts = ({type}) => {
     {
       id: 4,
       img: "https://images.pexels.com/photos/2065200/pexels-photo-2065200.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      title: "Hat",
+      title: "Skirt",
       isNew: false,
       oldPrice: 60,
       price: 40
