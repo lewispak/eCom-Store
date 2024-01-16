@@ -6,8 +6,6 @@ import List from '../../components/List/List';
 
 import "./products.scss";
 
-j
-
 const Products = () => {
 
   const catId =parseInt(useParams().id)
