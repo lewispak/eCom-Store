@@ -33,10 +33,10 @@ const Navbar = () => {
 
           {/* --- Navbar Shopping Categories --- */}
           <div className="item">
-            <Link className="link" to="/products/1">Women</Link>
+            <Link className="link" to="/products/2">Women</Link>
           </div>
           <div className="item">
-            <Link className="link" to="/products/2">Men</Link>
+            <Link className="link" to="/products/1">Men</Link>
           </div>
           <div className="item">
             <Link className="link" to="/products/3">Children</Link>
