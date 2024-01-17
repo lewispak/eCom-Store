@@ -1,16 +1,24 @@
 import React from "react";
+import useFetch from "../../hooks/useFetch.js";
 
 import Card from "../Card/Card";
 
 import "./list.scss"
 
-const List = () => {
+const List = ({ subCats, maxPrice, sort, catId }) => {
+
+  const{ data, loading, error } = useFetch(
+    `/products?populate=*&[filters][categories][id]=${catId}${subCats.map(item=>`&[filters][sub_categories][id][$eq]=${item}`
+    )}`
+  );
 
   return (
     <div className="list">
-      {/* {data?.map(item=>(
+      {loading 
+      ? "Loading..." 
+      : data?.map(item=>(
         <Card item={item} key={item.id}/>
-      ))} */}
+      ))}
     </div>
   )
 }

@@ -10,10 +10,24 @@ const Products = () => {
   const catId =parseInt(useParams().id)
   const [maxPrice, setMaxPrice] = useState(1000);
   const [sort, setSort] = useState(null);
+  const [selectedSubCats, setSelectedSubCats] = useState([]);
 
-  const{ data, loading, error }= useFetch(`/sub-categories?[filter][categories][id][$eq]=${catId}`)
+  const{ data, loading, error } = useFetch(
+    `/sub-categories?[filter][categories][id][$eq]=${catId}`
+  );
 
-  // console.log(data)
+  const handleChange = (e) => {
+    const value = e.target.value;
+    const isChecked = e.target.checked;
+
+    setSelectedSubCats(
+      isChecked 
+        ? [...selectedSubCats, value] 
+        : selectedSubCats.filter(item => item != value)
+    );
+  }
+
+  console.log(selectedSubCats)
 
   return (
     <div className="products">
@@ -24,7 +38,7 @@ const Products = () => {
           <h2>Product Categories</h2>
           {data?.map(item => (
           <div className="inputItem" key={item.id}>
-            <input type="checkbox" id="1" value={item.id}/>
+            <input type="checkbox" id="1" value={item.id} onChange={handleChange}/>
             <label htmlFor={item.id}>{item.attributes.title}</label>
           </div>
           ))}
@@ -59,7 +73,7 @@ const Products = () => {
           src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600" 
           alt="" 
         />
-        <List catId={catId} maxPrice={maxPrice} sort={sort}/>
+        <List catId={catId} maxPrice={maxPrice} sort={sort} subCats={selectedSubCats}/>
       </div>
 
     </div>  
