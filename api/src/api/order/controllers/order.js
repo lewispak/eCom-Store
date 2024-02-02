@@ -11,6 +11,7 @@ const { createCoreController } = require('@strapi/strapi').factories;
 module.exports = createCoreController('api::order.order', ({strapi}) => ({
   async create(ctx) {
     const{ products} = ctx.request.body;
+    
     try{
       const lineItems = await Promise.all(
         products.map(async (product) =>  {
@@ -32,12 +33,12 @@ module.exports = createCoreController('api::order.order', ({strapi}) => ({
       );
 
       const session = await stripe.checkout.sessions.create({
+        mode: 'payment',
+        success_url: `${process.env.CLIENT_URL}?success=true`,
+        cancel_url: `${process.env.CLIENT_URL}?success=false`,
+        line_items: lineItems,
         shipping_address_collection: {allowed_countries: ['US', 'CA']},
         payment_method_types: ["card"],
-        mode: 'payment',
-        success_url: process.env.CLIENT_URL+"?success=true",
-        cancel_url: process.env.CLIENT_URL+"?success=false",
-        line_items: lineItems,
       });
 
       await strapi
