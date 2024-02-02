@@ -40,6 +40,7 @@ const Cart = () => {
       console.log(err)
     }
   };
+  
   return (
     <div className="cart">
       <h1>Products in your cart</h1>
