@@ -2,6 +2,7 @@
 eCom store project exploring:
 
 - React Framework w/ Vite
+- Sass
 - Strapi
 - Stripe
 - Hostinger
