@@ -9,12 +9,12 @@ lerna-debug.log*
 yarn.lock
 
 # misc
-# .env
+.env
 .DS_Store
-# .env.local
-# .env.development.local
-# .env.test.local
-# .env.production.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # dependencies
 /node_modules
